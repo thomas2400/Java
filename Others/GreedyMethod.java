@@ -44,9 +44,7 @@ public class GreedyMethod {
       iw = currentItem.getWeight();
       iv = currentItem.getValues();
 
-      if (
-        bagsize - iw >= 0
-      ) { // if the space available is not 0 , then add in the items that is fit with the space available currently
+      if (bagsize - iw >= 0) { // if the space available is not 0 , then add in the items that is fit with the space available currently
         bagsize -= iw;
         totalVal += iv;
       } else {
