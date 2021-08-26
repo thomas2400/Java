@@ -40,11 +40,7 @@ public class GCD {
    */
   public static int gcd(int[] number) {
     int result = number[0];
-    for (
-      int i = 1;
-      i < number.length;
-      i++
-    ) result = gcd(result, number[i]); // call gcd function (input two value)
+    for (int i = 1; i < number.length; i++) result = gcd(result, number[i]); // call gcd function (input two value)
 
     return result;
   }

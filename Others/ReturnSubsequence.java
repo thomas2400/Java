@@ -22,9 +22,7 @@ public class ReturnSubsequence {
    * @return subsequence
    */
   private static String[] returnSubsequence(String givenString) {
-    if (
-      givenString.length() == 0
-    ) { // in it // If string is empty we will create an array of size=1 and insert "" (Empty string)
+    if (givenString.length() == 0) { // in it // If string is empty we will create an array of size=1 and insert "" (Empty string)
       String[] ans = new String[1];
       ans[0] = "";
       return ans;

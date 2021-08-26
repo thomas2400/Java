@@ -56,15 +56,15 @@ public class TernarySearch implements SearchAlgorithm {
       return mid1;
     } else if (key.compareTo(arr[mid2]) == 0) {
       return mid2;
-    }/* Search the first (1/3) rd part of the array.*/ else if (
+    } /* Search the first (1/3) rd part of the array.*/else if (
       key.compareTo(arr[mid1]) < 0
     ) {
       return ternarySearch(arr, key, start, --mid1);
-    }/* Search 3rd (1/3)rd part of the array */ else if (
+    } /* Search 3rd (1/3)rd part of the array */else if (
       key.compareTo(arr[mid2]) > 0
     ) {
       return ternarySearch(arr, key, ++mid2, end);
-    }/* Search middle (1/3)rd part of the array */ else {
+    } /* Search middle (1/3)rd part of the array */else {
       return ternarySearch(arr, key, mid1, mid2);
     }
   }
