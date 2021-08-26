@@ -44,8 +44,7 @@ public class GCD {
       int i = 1;
       i < number.length;
       i++
-    ) // call gcd function (input two value)
-    result = gcd(result, number[i]);
+    ) result = gcd(result, number[i]); // call gcd function (input two value)
 
     return result;
   }
