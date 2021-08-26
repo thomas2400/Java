@@ -2,8 +2,8 @@ package Maths;
 
 /** Find the area of various geometric shapes */
 public class Area {
-  public static void main(String[] args) {
 
+  public static void main(String[] args) {
     /* test cube */
     assert Double.compare(surfaceAreaCube(1), 6.0) == 0;
 
@@ -101,7 +101,11 @@ public class Area {
    * @param height height of trapezium
    * @return area of given trapezium
    */
-  private static double surfaceAreaTrapezium(double base1, double base2, double height) {
+  private static double surfaceAreaTrapezium(
+    double base1,
+    double base2,
+    double height
+  ) {
     return (base1 + base2) * height / 2;
   }
 

@@ -3,6 +3,7 @@ package Others;
 import java.util.*;
 
 public class StackPostfixNotation {
+
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     String post = scanner.nextLine(); // Takes input with spaces in between eg. "1 21 +"
@@ -32,7 +33,6 @@ public class StackPostfixNotation {
         } else {
           s.push(num1 / num2);
         }
-
         //  "+", "-", "*", "/"
       }
     }

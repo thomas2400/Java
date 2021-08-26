@@ -1,6 +1,7 @@
 package Maths;
 
 public class PowRecursion {
+
   public static void main(String[] args) {
     assert Double.compare(pow(2, 0), Math.pow(2, 0)) == 0;
     assert Double.compare(pow(0, 2), Math.pow(0, 2)) == 0;

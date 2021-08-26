@@ -1,6 +1,7 @@
 package Maths;
 
 public class BinaryPow {
+
   /**
    * Calculate a^p using binary exponentiation
    * [Binary-Exponentiation](https://cp-algorithms.com/algebra/binary-exp.html)

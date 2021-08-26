@@ -3,6 +3,7 @@ package Others;
 import java.util.Scanner;
 
 class Krishnamurthy {
+
   static int fact(int n) {
     int i, p = 1;
     for (i = n; i >= 1; i--) p = p * i;
@@ -20,8 +21,9 @@ class Krishnamurthy {
       s = s + fact(b);
       a = a / 10;
     }
-    if (s == n) System.out.print(n + " is a krishnamurthy number");
-    else System.out.print(n + " is not a krishnamurthy number");
+    if (s == n) System.out.print(
+      n + " is a krishnamurthy number"
+    ); else System.out.print(n + " is not a krishnamurthy number");
     sc.close();
   }
 }

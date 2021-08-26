@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class MatrixChainMultiplication {
+
   private static Scanner scan = new Scanner(System.in);
   private static ArrayList<Matrix> mArray = new ArrayList<>();
   private static int size;
@@ -15,7 +16,9 @@ public class MatrixChainMultiplication {
   public static void main(String[] args) {
     int count = 1;
     while (true) {
-      String[] mSize = input("input size of matrix A(" + count + ") ( ex. 10 20 ) : ");
+      String[] mSize = input(
+        "input size of matrix A(" + count + ") ( ex. 10 20 ) : "
+      );
       int col = Integer.parseInt(mSize[0]);
       if (col == 0) break;
       int row = Integer.parseInt(mSize[1]);
@@ -111,6 +114,7 @@ public class MatrixChainMultiplication {
 }
 
 class Matrix {
+
   private int count;
   private int col;
   private int row;

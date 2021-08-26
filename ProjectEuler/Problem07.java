@@ -9,17 +9,18 @@ package ProjectEuler;
  * <p>link: https://projecteuler.net/problem=7
  */
 public class Problem07 {
+
   public static void main(String[] args) {
     int[][] testNumbers = {
-      {1, 2},
-      {2, 3},
-      {3, 5},
-      {4, 7},
-      {5, 11},
-      {6, 13},
-      {20, 71},
-      {50, 229},
-      {100, 541}
+      { 1, 2 },
+      { 2, 3 },
+      { 3, 5 },
+      { 4, 7 },
+      { 5, 11 },
+      { 6, 13 },
+      { 20, 71 },
+      { 50, 229 },
+      { 100, 541 },
     };
     for (int[] number : testNumbers) {
       assert solution1(number[0]) == number[1];

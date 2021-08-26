@@ -6,7 +6,6 @@ public class EggDropping {
   // min trials with n eggs and m floors
 
   private static int minTrials(int n, int m) {
-
     int[][] eggFloor = new int[n + 1][m + 1];
     int result, x;
 

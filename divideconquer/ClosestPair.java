@@ -70,7 +70,6 @@ public final class ClosestPair {
    * @return pivot index
    */
   public int xPartition(final Location[] a, final int first, final int last) {
-
     Location pivot = a[last]; // pivot
     int i = first - 1;
     Location temp; // Temporarily store value for position transformation
@@ -98,7 +97,6 @@ public final class ClosestPair {
    * @return pivot index
    */
   public int yPartition(final Location[] a, final int first, final int last) {
-
     Location pivot = a[last]; // pivot
     int i = first - 1;
     Location temp; // Temporarily store value for position transformation
@@ -125,7 +123,6 @@ public final class ClosestPair {
    * @param last (IN Parameter) last point <br>
    */
   public void xQuickSort(final Location[] a, final int first, final int last) {
-
     if (first < last) {
       int q = xPartition(a, first, last); // pivot
       xQuickSort(a, first, q - 1); // Left
@@ -141,7 +138,6 @@ public final class ClosestPair {
    * @param last (IN Parameter) last point <br>
    */
   public void yQuickSort(final Location[] a, final int first, final int last) {
-
     if (first < last) {
       int q = yPartition(a, first, last); // pivot
       yQuickSort(a, first, q - 1); // Left
@@ -157,7 +153,6 @@ public final class ClosestPair {
    * @return minimum distance <br>
    */
   public double closestPair(final Location[] a, final int indexNum) {
-
     Location[] divideArray = new Location[indexNum];
     System.arraycopy(a, 0, divideArray, 0, indexNum); // Copy previous array
     int divideX = indexNum / 2; // Intermediate value for divide
@@ -244,7 +239,6 @@ public final class ClosestPair {
    * @return <br>
    */
   public double bruteForce(final Location[] arrayParam) {
-
     double minValue = Double.MAX_VALUE; // minimum distance
     double length = 0;
     double xGap = 0; // Difference between x coordinates
@@ -300,7 +294,6 @@ public final class ClosestPair {
    * @throws IOException If an input or output exception occurred
    */
   public static void main(final String[] args) {
-
     // Input data consists of one x-coordinate and one y-coordinate
 
     ClosestPair cp = new ClosestPair(12);

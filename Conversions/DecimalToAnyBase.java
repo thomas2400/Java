@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 // Driver Program
 public class DecimalToAnyBase {
+
   public static void main(String[] args) throws Exception {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     System.out.println("Enter the decimal input below: ");
@@ -20,7 +21,13 @@ public class DecimalToAnyBase {
 
     System.out.println("Decimal Input" + " is: " + decInput);
     System.out.println(
-        "Value of " + decInput + " in base " + base + " is: " + convertToAnyBase(decInput, base));
+      "Value of " +
+      decInput +
+      " in base " +
+      base +
+      " is: " +
+      convertToAnyBase(decInput, base)
+    );
 
     br.close();
   }
@@ -55,7 +62,8 @@ public class DecimalToAnyBase {
    * @return character value of input integer
    */
   public static char reVal(int num) {
-    if (num >= 0 && num <= 9) return (char) (num + '0');
-    else return (char) (num - 10 + 'A');
+    if (num >= 0 && num <= 9) return (char) (num + '0'); else return (char) (
+      num - 10 + 'A'
+    );
   }
 }

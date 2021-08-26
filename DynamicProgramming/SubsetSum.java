@@ -4,9 +4,9 @@ public class SubsetSum {
 
   /** Driver Code */
   public static void main(String[] args) {
-    int[] arr = new int[] {50, 4, 10, 15, 34};
-    assert subsetSum(arr, 64); /* 4 + 10 + 15 + 34 = 64 */
-    assert subsetSum(arr, 99); /* 50 + 15 + 34 = 99 */
+    int[] arr = new int[] { 50, 4, 10, 15, 34 };
+    assert subsetSum(arr, 64);/* 4 + 10 + 15 + 34 = 64 */
+    assert subsetSum(arr, 99);/* 50 + 15 + 34 = 99 */
     assert !subsetSum(arr, 5);
     assert !subsetSum(arr, 66);
   }

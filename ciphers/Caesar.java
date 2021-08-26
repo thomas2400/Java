@@ -25,21 +25,16 @@ public class Caesar {
 
     final int length = message.length();
     for (int i = 0; i < length; i++) {
-
       //            int current = message.charAt(i); //using char to shift characters because ascii
       // is in-order latin alphabet
       char current = message.charAt(i); // Java law : char + int = char
 
       if (IsCapitalLatinLetter(current)) {
-
         current += shift;
         encoded += (char) (current > 'Z' ? current - 26 : current); // 26 = number of latin letters
-
       } else if (IsSmallLatinLetter(current)) {
-
         current += shift;
         encoded += (char) (current > 'z' ? current - 26 : current); // 26 = number of latin letters
-
       } else {
         encoded += current;
       }
@@ -63,15 +58,11 @@ public class Caesar {
     for (int i = 0; i < length; i++) {
       char current = encryptedMessage.charAt(i);
       if (IsCapitalLatinLetter(current)) {
-
         current -= shift;
         decoded += (char) (current < 'A' ? current + 26 : current); // 26 = number of latin letters
-
       } else if (IsSmallLatinLetter(current)) {
-
         current -= shift;
         decoded += (char) (current < 'a' ? current + 26 : current); // 26 = number of latin letters
-
       } else {
         decoded += current;
       }
@@ -107,8 +98,7 @@ public class Caesar {
     switch (choice) {
       case 'E':
       case 'e':
-        System.out.println(
-            "ENCODED MESSAGE IS \n" + encode(message, shift)); // send our function to handle
+        System.out.println("ENCODED MESSAGE IS \n" + encode(message, shift)); // send our function to handle
         break;
       case 'D':
       case 'd':

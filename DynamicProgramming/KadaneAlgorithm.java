@@ -18,8 +18,9 @@ public class KadaneAlgorithm {
    */
   static int largestContiguousSum(int arr[]) {
     int i, len = arr.length, cursum = 0, maxsum = Integer.MIN_VALUE;
-    if (len == 0) // empty array
-    return 0;
+    if (
+      len == 0
+    ) return 0; // empty array
     for (i = 0; i < len; i++) {
       cursum += arr[i];
       if (cursum > maxsum) {

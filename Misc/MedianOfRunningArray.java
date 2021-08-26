@@ -5,6 +5,7 @@ import java.util.PriorityQueue;
 
 /** @author shrutisheoran */
 public class MedianOfRunningArray {
+
   private PriorityQueue<Integer> p1;
   private PriorityQueue<Integer> p2;
 
@@ -37,7 +38,7 @@ public class MedianOfRunningArray {
     */
 
     MedianOfRunningArray p = new MedianOfRunningArray();
-    int arr[] = {10, 7, 4, 9, 2, 3, 11, 17, 14};
+    int arr[] = { 10, 7, 4, 9, 2, 3, 11, 17, 14 };
     for (int i = 0; i < 9; i++) {
       p.insert(arr[i]);
       System.out.print(p.median() + " ");

@@ -9,6 +9,7 @@ import java.util.Comparator;
  *     algorithm
  */
 public class SkylineAlgorithm {
+
   private ArrayList<Point> points;
 
   /**
@@ -38,7 +39,6 @@ public class SkylineAlgorithm {
    * @see Point
    */
   public ArrayList<Point> produceSubSkyLines(ArrayList<Point> list) {
-
     // part where function exits flashback
     int size = list.size();
     if (size == 1) {
@@ -84,11 +84,15 @@ public class SkylineAlgorithm {
    * @param right the skyline of the right part of points
    * @return left the final skyline
    */
-  public ArrayList<Point> produceFinalSkyLine(ArrayList<Point> left, ArrayList<Point> right) {
-
+  public ArrayList<Point> produceFinalSkyLine(
+    ArrayList<Point> left,
+    ArrayList<Point> right
+  ) {
     // dominated points of ArrayList left are removed
     for (int i = 0; i < left.size() - 1; i++) {
-      if (left.get(i).x == left.get(i + 1).x && left.get(i).y > left.get(i + 1).y) {
+      if (
+        left.get(i).x == left.get(i + 1).x && left.get(i).y > left.get(i + 1).y
+      ) {
         left.remove(i);
         i--;
       }
@@ -119,6 +123,7 @@ public class SkylineAlgorithm {
   }
 
   public static class Point {
+
     private int x;
     private int y;
 
@@ -152,7 +157,9 @@ public class SkylineAlgorithm {
      */
     public boolean dominates(Point p1) {
       // checks if p1 is dominated
-      return (this.x < p1.x && this.y <= p1.y) || (this.x <= p1.x && this.y < p1.y);
+      return (
+        (this.x < p1.x && this.y <= p1.y) || (this.x <= p1.x && this.y < p1.y)
+      );
     }
   }
 
@@ -161,6 +168,7 @@ public class SkylineAlgorithm {
    * later.
    */
   class XComparator implements Comparator<Point> {
+
     @Override
     public int compare(Point a, Point b) {
       return Integer.compare(a.x, b.x);

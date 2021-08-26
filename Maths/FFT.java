@@ -11,12 +11,14 @@ import java.util.Collections;
  * @version 1.0
  */
 public class FFT {
+
   /**
    * This class represents a complex number and has methods for basic operations.
    *
    * <p>More info: https://introcs.cs.princeton.edu/java/32class/Complex.java.html
    */
   static class Complex {
+
     private double real, img;
 
     /** Default Constructor. Creates the complex number 0. */

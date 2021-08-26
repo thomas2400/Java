@@ -9,18 +9,18 @@ package ProjectEuler;
  * <p>link: https://projecteuler.net/problem=4
  */
 public class Problem04 {
-  public static void main(String[] args) {
 
+  public static void main(String[] args) {
     assert solution1(10000) == -1;
-    assert solution1(20000) == 19591; /* 19591 == 143*137 */
-    assert solution1(30000) == 29992; /* 29992 == 184*163 */
-    assert solution1(40000) == 39893; /* 39893 == 287*139 */
-    assert solution1(50000) == 49894; /* 49894 == 494*101 */
-    assert solution1(60000) == 59995; /* 59995 == 355*169 */
-    assert solution1(70000) == 69996; /* 69996 == 614*114 */
-    assert solution1(80000) == 79897; /* 79897 == 733*109 */
-    assert solution1(90000) == 89798; /* 89798 == 761*118 */
-    assert solution1(100000) == 99999; /* 100000 == 813*123 */
+    assert solution1(20000) == 19591;/* 19591 == 143*137 */
+    assert solution1(30000) == 29992;/* 29992 == 184*163 */
+    assert solution1(40000) == 39893;/* 39893 == 287*139 */
+    assert solution1(50000) == 49894;/* 49894 == 494*101 */
+    assert solution1(60000) == 59995;/* 59995 == 355*169 */
+    assert solution1(70000) == 69996;/* 69996 == 614*114 */
+    assert solution1(80000) == 79897;/* 79897 == 733*109 */
+    assert solution1(90000) == 89798;/* 89798 == 761*118 */
+    assert solution1(100000) == 99999;/* 100000 == 813*123 */
   }
 
   private static int solution1(int n) {
@@ -36,6 +36,6 @@ public class Problem04 {
         }
       }
     }
-    return -1; /* not found */
+    return -1;/* not found */
   }
 }

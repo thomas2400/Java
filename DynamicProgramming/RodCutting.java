@@ -12,7 +12,8 @@ public class RodCutting {
 
     for (int i = 1; i <= n; i++) {
       int max_val = Integer.MIN_VALUE;
-      for (int j = 0; j < i; j++) max_val = Math.max(max_val, price[j] + val[i - j - 1]);
+      for (int j = 0; j < i; j++) max_val =
+        Math.max(max_val, price[j] + val[i - j - 1]);
 
       val[i] = max_val;
     }
@@ -22,7 +23,7 @@ public class RodCutting {
 
   // main function to test
   public static void main(String args[]) {
-    int[] arr = new int[] {2, 5, 13, 19, 20};
+    int[] arr = new int[] { 2, 5, 13, 19, 20 };
     int result = cutRod(arr, arr.length);
     System.out.println("Maximum Obtainable Value is " + result);
   }

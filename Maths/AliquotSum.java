@@ -7,6 +7,7 @@ package Maths;
  * sum of 15 is 9 i.e. (1 + 3 + 5). Wikipedia: https://en.wikipedia.org/wiki/Aliquot_sum
  */
 public class AliquotSum {
+
   public static void main(String[] args) {
     assert aliquotSum(1) == 0;
     assert aliquotSum(6) == 6;

@@ -10,17 +10,18 @@ package ProjectEuler;
  * <p>link: https://projecteuler.net/problem=6
  */
 public class Problem06 {
+
   public static void main(String[] args) {
     int[][] testNumbers = {
-      {10, 2640},
-      {15, 13160},
-      {20, 41230},
-      {50, 1582700}
+      { 10, 2640 },
+      { 15, 13160 },
+      { 20, 41230 },
+      { 50, 1582700 },
     };
 
     for (int[] testNumber : testNumbers) {
-      assert solution1(testNumber[0]) == testNumber[1]
-          && solutions2(testNumber[0]) == testNumber[1];
+      assert solution1(testNumber[0]) == testNumber[1] &&
+      solutions2(testNumber[0]) == testNumber[1];
     }
   }
 

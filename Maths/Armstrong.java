@@ -30,12 +30,11 @@ public class Armstrong {
       numberOfDigits++;
       temp /= 10;
     }
-    temp = number; /* copy number again */
+    temp = number;/* copy number again */
     while (number > 0) {
       int remainder = number % 10;
       int power = 1;
-      for (int i = 1; i <= numberOfDigits; power *= remainder, ++i)
-        ;
+      for (int i = 1; i <= numberOfDigits; power *= remainder, ++i);
       sum = sum + power;
       number /= 10;
     }

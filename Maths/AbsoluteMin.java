@@ -8,12 +8,15 @@ import java.util.Arrays;
  * <p>absMin([0, 5, 1, 11]) = 0, absMin([3 , -10, -2]) = -2
  */
 public class AbsoluteMin {
+
   public static void main(String[] args) {
-    int[] testnums = {4, 0, 16};
+    int[] testnums = { 4, 0, 16 };
     assert absMin(testnums) == 0;
 
-    int[] numbers = {3, -10, -2};
-    System.out.println("absMin(" + Arrays.toString(numbers) + ") = " + absMin(numbers));
+    int[] numbers = { 3, -10, -2 };
+    System.out.println(
+      "absMin(" + Arrays.toString(numbers) + ") = " + absMin(numbers)
+    );
   }
 
   /**

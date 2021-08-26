@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 /** @author Dekas Dimitrios */
 public class FirstFit {
-  private static final int NO_ALLOCATION =
-      -255; // if a process has been allocated in position -255,
+
+  private static final int NO_ALLOCATION = -255; // if a process has been allocated in position -255,
+
   // it means that it has not been actually allocated.
 
   /**
@@ -36,17 +37,17 @@ public class FirstFit {
    *     blocks for.
    * @return the ArrayList filled with Integers repressenting the memory allocation that took place.
    */
-  static ArrayList<Integer> firstFit(int[] sizeOfBlocks, int[] sizeOfProcesses) {
+  static ArrayList<Integer> firstFit(
+    int[] sizeOfBlocks,
+    int[] sizeOfProcesses
+  ) {
     // The array list responsible for saving the memory allocations done by the first-fit algorithm
     ArrayList<Integer> memAlloc = new ArrayList<>();
     // Do this for every process
     for (int processSize : sizeOfProcesses) {
-      int chosenBlockIdx =
-          findFirstFit(
-              sizeOfBlocks, processSize); // Find the index of the memory block going to be used
+      int chosenBlockIdx = findFirstFit(sizeOfBlocks, processSize); // Find the index of the memory block going to be used
       memAlloc.add(chosenBlockIdx); // Store the chosen block index in the memAlloc array list
-      if (chosenBlockIdx
-          != NO_ALLOCATION) { // Only if a block was chosen to store the process in it,
+      if (chosenBlockIdx != NO_ALLOCATION) { // Only if a block was chosen to store the process in it,
         sizeOfBlocks[chosenBlockIdx] -= processSize; // resize the block based on the process size
       }
     }
@@ -64,8 +65,9 @@ public class FirstFit {
     System.out.println("===========\t=========");
     for (int i = 0; i < memAllocation.size(); i++) {
       System.out.print(" " + i + "\t\t");
-      if (memAllocation.get(i) != NO_ALLOCATION) System.out.print(memAllocation.get(i));
-      else System.out.print("Not Allocated");
+      if (memAllocation.get(i) != NO_ALLOCATION) System.out.print(
+        memAllocation.get(i)
+      ); else System.out.print("Not Allocated");
       System.out.println();
     }
   }

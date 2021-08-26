@@ -6,6 +6,7 @@ package strings;
  * string, so that the original string becomes the string "cdefab"
  */
 public class Rotation {
+
   public static void main(String[] args) {
     assert rotation("abcdef", 2).equals("cdefab");
 

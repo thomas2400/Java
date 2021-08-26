@@ -2,6 +2,7 @@ package Maths;
 
 // POWER (exponentials) Examples (a^b)
 public class Pow {
+
   public static void main(String[] args) {
     assert pow(2, 0) == Math.pow(2, 0); // == 1
     assert pow(0, 2) == Math.pow(0, 2); // == 0

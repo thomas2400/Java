@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 /** @author Afrizal Fikri (https://github.com/icalF) */
 public class LongestIncreasingSubsequence {
-  public static void main(String[] args) {
 
+  public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
 
@@ -22,8 +22,7 @@ public class LongestIncreasingSubsequence {
   private static int upperBound(int[] ar, int l, int r, int key) {
     while (l < r - 1) {
       int m = (l + r) >>> 1;
-      if (ar[m] >= key) r = m;
-      else l = m;
+      if (ar[m] >= key) r = m; else l = m;
     }
 
     return r;
@@ -40,13 +39,10 @@ public class LongestIncreasingSubsequence {
 
     tail[0] = array[0];
     for (int i = 1; i < N; i++) {
-
       // new smallest value
       if (array[i] < tail[0]) tail[0] = array[i];
-
       // array[i] extends largest subsequence
       else if (array[i] > tail[length - 1]) tail[length++] = array[i];
-
       // array[i] will become end candidate of an existing subsequence or
       // Throw away larger elements in all LIS, to make room for upcoming grater elements than
       // array[i]
@@ -73,6 +69,7 @@ public class LongestIncreasingSubsequence {
     }
     return lis;
   }
+
   // O(logn)
   private static int binarySearchBetween(int[] t, int end, int key) {
     int left = 0;
@@ -81,8 +78,7 @@ public class LongestIncreasingSubsequence {
     if (key > t[end]) return end + 1;
     while (left < right - 1) {
       int middle = (left + right) / 2;
-      if (t[middle] < key) left = middle;
-      else right = middle;
+      if (t[middle] < key) left = middle; else right = middle;
     }
     return right;
   }

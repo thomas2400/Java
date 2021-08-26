@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 /** @author Dekas Dimitrios */
 public class BestFit {
-  private static final int NO_ALLOCATION =
-      -255; // if a process has been allocated in position -255,
+
+  private static final int NO_ALLOCATION = -255; // if a process has been allocated in position -255,
+
   // it means that it has not been actually allocated.
 
   /**
@@ -36,13 +37,13 @@ public class BestFit {
     // Initialize minDiff with an unreachable value by a difference between a blockSize and the
     // processSize.
     int minDiff = findMaxElement(blockSizes);
-    int index =
-        NO_ALLOCATION; // If there is no block that can fit the process, return NO_ALLOCATION as the
+    int index = NO_ALLOCATION; // If there is no block that can fit the process, return NO_ALLOCATION as the
     // result.
-    for (int i = 0;
-        i < blockSizes.length;
-        i++) { // Find the most fitting memory block for the given process.
-      if (blockSizes[i] - processSize < minDiff && blockSizes[i] - processSize >= 0) {
+    for (int i = 0; i < blockSizes.length; i++) { // Find the most fitting memory block for the given process.
+      if (
+        blockSizes[i] - processSize < minDiff &&
+        blockSizes[i] - processSize >= 0
+      ) {
         minDiff = blockSizes[i] - processSize;
         index = i;
       }
@@ -65,12 +66,9 @@ public class BestFit {
     ArrayList<Integer> memAlloc = new ArrayList<>();
     // Do this for every process
     for (int processSize : sizeOfProcesses) {
-      int chosenBlockIdx =
-          findBestFit(
-              sizeOfBlocks, processSize); // Find the index of the memory block going to be used
+      int chosenBlockIdx = findBestFit(sizeOfBlocks, processSize); // Find the index of the memory block going to be used
       memAlloc.add(chosenBlockIdx); // Store the chosen block index in the memAlloc array list
-      if (chosenBlockIdx
-          != NO_ALLOCATION) { // Only if a block was chosen to store the process in it,
+      if (chosenBlockIdx != NO_ALLOCATION) { // Only if a block was chosen to store the process in it,
         sizeOfBlocks[chosenBlockIdx] -= processSize; // resize the block based on the process size
       }
     }
@@ -88,8 +86,9 @@ public class BestFit {
     System.out.println("===========\t=========");
     for (int i = 0; i < memAllocation.size(); i++) {
       System.out.print(" " + i + "\t\t");
-      if (memAllocation.get(i) != NO_ALLOCATION) System.out.print(memAllocation.get(i));
-      else System.out.print("Not Allocated");
+      if (memAllocation.get(i) != NO_ALLOCATION) System.out.print(
+        memAllocation.get(i)
+      ); else System.out.print("Not Allocated");
       System.out.println();
     }
   }

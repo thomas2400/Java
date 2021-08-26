@@ -14,6 +14,7 @@ import java.util.Scanner;
  *     There is a triplet (12, 3 and 9) present in the array whose sum is 24.
  */
 class ThreeSum {
+
   public static void main(String args[]) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt(); // Length of an array
@@ -29,7 +30,6 @@ class ThreeSum {
     Arrays.sort(a); // Sort the array if array is not sorted
 
     for (int i = 0; i < n; i++) {
-
       int l = i + 1, r = n - 1;
 
       while (l < r) {
@@ -37,8 +37,7 @@ class ThreeSum {
           System.out.println(a[i] + " " + a[l] + " " + a[r]);
           break;
         } // if you want all the triplets write l++;r--; insted of break;
-        else if (a[i] + a[l] + a[r] < n_find) l++;
-        else r--;
+        else if (a[i] + a[l] + a[r] < n_find) l++; else r--;
       }
     }
 

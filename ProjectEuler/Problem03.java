@@ -38,21 +38,20 @@ public class Problem03 {
    */
   static long maxPrimeFactor(long n) {
     for (int i = 2; i < n / 2; i++) {
-      if (isPrime(i))
-        while (n % i == 0) {
-          n /= i;
-        }
+      if (isPrime(i)) while (n % i == 0) {
+        n /= i;
+      }
     }
     return n;
   }
 
   public static void main(String[] args) {
     int[][] testNumbers = {
-      {87, 29},
-      {10, 5},
-      {21, 7},
-      {657, 73},
-      {777, 37}
+      { 87, 29 },
+      { 10, 5 },
+      { 21, 7 },
+      { 657, 73 },
+      { 777, 37 },
     };
     for (int[] num : testNumbers) {
       assert Problem03.maxPrimeFactor(num[0]) == num[1];

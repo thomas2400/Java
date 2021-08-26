@@ -11,6 +11,7 @@ import java.util.Scanner;
  * <p>Source for the explanation: https://en.wikipedia.org/wiki/Fibonacci_number
  */
 public class FibToN {
+
   public static void main(String[] args) {
     // take input
     Scanner scn = new Scanner(System.in);

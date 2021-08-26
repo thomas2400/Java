@@ -2,6 +2,7 @@ package Maths;
 
 /** @see <a href="https://en.wikipedia.org/wiki/Combination">Combination</a> */
 public class Combinations {
+
   public static void main(String[] args) {
     assert combinations(1, 1) == 1;
     assert combinations(10, 5) == 252;

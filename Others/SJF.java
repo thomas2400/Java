@@ -1,4 +1,5 @@
 package Others;
+
 /**
  *
  *
@@ -72,14 +73,14 @@ class Schedule {
   }
 
   void startScheduling() {
-
     processes.sort(
-        new Comparator<Process>() {
-          @Override
-          public int compare(Process a, Process b) {
-            return a.arrivalTime - b.arrivalTime;
-          }
-        });
+      new Comparator<Process>() {
+        @Override
+        public int compare(Process a, Process b) {
+          return a.arrivalTime - b.arrivalTime;
+        }
+      }
+    );
 
     while (!(arrivals.size() == 0 && remainingProcess.size() == 0)) {
       removeFinishedProcess();
@@ -89,19 +90,22 @@ class Schedule {
       }
 
       remainingProcess.sort(
-          new Comparator<Process>() {
-            private int alpha = 6;
-            private int beta = 1;
+        new Comparator<Process>() {
+          private int alpha = 6;
+          private int beta = 1;
 
-            @Override
-            public int compare(Process a, Process b) {
-              int aRem = a.remainingTime;
-              int bRem = b.remainingTime;
-              int aprior = a.priority;
-              int bprior = b.priority;
-              return (alpha * aRem + beta * aprior) - (alpha * bRem + beta * bprior);
-            }
-          });
+          @Override
+          public int compare(Process a, Process b) {
+            int aRem = a.remainingTime;
+            int bRem = b.remainingTime;
+            int aprior = a.priority;
+            int bprior = b.priority;
+            return (
+              (alpha * aRem + beta * aprior) - (alpha * bRem + beta * bprior)
+            );
+          }
+        }
+      );
 
       int k = timeElapsed(timer);
       ageing(k);
@@ -121,7 +125,8 @@ class Schedule {
 
     for (int i = 0; i < completed.size(); i++) {
       int pid = remainingProcess.get(completed.get(i)).pid;
-      processes.get(pid).waitTime = remainingProcess.get(completed.get(i)).waitTime;
+      processes.get(pid).waitTime =
+        remainingProcess.get(completed.get(i)).waitTime;
       remainingProcess.remove(remainingProcess.get(completed.get(i)));
     }
   }
@@ -155,18 +160,20 @@ class Schedule {
     float tatTime = 0;
 
     for (int i = 0; i < noOfProcess; i++) {
-      processes.get(i).turnAroundTime = processes.get(i).waitTime + processes.get(i).burstTime;
+      processes.get(i).turnAroundTime =
+        processes.get(i).waitTime + processes.get(i).burstTime;
 
       waitTimeTot += processes.get(i).waitTime;
       tatTime += processes.get(i).turnAroundTime;
 
       System.out.println(
-          "Process no.: "
-              + i
-              + " Wait time: "
-              + processes.get(i).waitTime
-              + " Turn Around Time: "
-              + processes.get(i).turnAroundTime);
+        "Process no.: " +
+        i +
+        " Wait time: " +
+        processes.get(i).waitTime +
+        " Turn Around Time: " +
+        processes.get(i).turnAroundTime
+      );
     }
 
     System.out.println("Average Waiting Time: " + waitTimeTot / noOfProcess);
@@ -176,6 +183,7 @@ class Schedule {
 }
 
 public class SJF {
+
   public static void main(String[] args) {
     Schedule s = new Schedule();
     s.startScheduling();

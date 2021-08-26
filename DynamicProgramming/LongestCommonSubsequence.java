@@ -3,7 +3,6 @@ package DynamicProgramming;
 class LongestCommonSubsequence {
 
   public static String getLCS(String str1, String str2) {
-
     // At least one string is null
     if (str1 == null || str2 == null) return null;
 
@@ -24,7 +23,9 @@ class LongestCommonSubsequence {
           lcsMatrix[i][j] = lcsMatrix[i - 1][j - 1] + 1;
         } else {
           lcsMatrix[i][j] =
-              lcsMatrix[i - 1][j] > lcsMatrix[i][j - 1] ? lcsMatrix[i - 1][j] : lcsMatrix[i][j - 1];
+            lcsMatrix[i - 1][j] > lcsMatrix[i][j - 1]
+              ? lcsMatrix[i - 1][j]
+              : lcsMatrix[i][j - 1];
         }
       }
     }

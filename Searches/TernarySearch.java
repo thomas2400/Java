@@ -38,7 +38,12 @@ public class TernarySearch implements SearchAlgorithm {
    * @param end The ending index till which we will Search.
    * @return Returns the index of the Element if found. Else returns -1.
    */
-  private <T extends Comparable<T>> int ternarySearch(T[] arr, T key, int start, int end) {
+  private <T extends Comparable<T>> int ternarySearch(
+    T[] arr,
+    T key,
+    int start,
+    int end
+  ) {
     if (start > end) {
       return -1;
     }
@@ -51,19 +56,15 @@ public class TernarySearch implements SearchAlgorithm {
       return mid1;
     } else if (key.compareTo(arr[mid2]) == 0) {
       return mid2;
-    }
-
-    /* Search the first (1/3) rd part of the array.*/
+    } /* Search the first (1/3) rd part of the array.*/
 
     else if (key.compareTo(arr[mid1]) < 0) {
       return ternarySearch(arr, key, start, --mid1);
-    }
-    /* Search 3rd (1/3)rd part of the array */
+    } /* Search 3rd (1/3)rd part of the array */
 
     else if (key.compareTo(arr[mid2]) > 0) {
       return ternarySearch(arr, key, ++mid2, end);
-    }
-    /* Search middle (1/3)rd part of the array */
+    } /* Search middle (1/3)rd part of the array */
 
     else {
       return ternarySearch(arr, key, mid1, mid2);
@@ -75,8 +76,11 @@ public class TernarySearch implements SearchAlgorithm {
     Random r = new Random();
     int size = 100;
     int maxElement = 100000;
-    Integer[] integers =
-        Stream.generate(() -> r.nextInt(maxElement)).limit(size).sorted().toArray(Integer[]::new);
+    Integer[] integers = Stream
+      .generate(() -> r.nextInt(maxElement))
+      .limit(size)
+      .sorted()
+      .toArray(Integer[]::new);
 
     // the element that should be found
     Integer shouldBeFound = integers[r.nextInt(size - 1)];
@@ -85,13 +89,22 @@ public class TernarySearch implements SearchAlgorithm {
     int atIndex = search.find(integers, shouldBeFound);
 
     System.out.println(
-        format(
-            "Should be found: %d. Found %d at index %d. An array length %d",
-            shouldBeFound, integers[atIndex], atIndex, size));
+      format(
+        "Should be found: %d. Found %d at index %d. An array length %d",
+        shouldBeFound,
+        integers[atIndex],
+        atIndex,
+        size
+      )
+    );
 
     int toCheck = Arrays.binarySearch(integers, shouldBeFound);
     System.out.println(
-        format(
-            "Found by system method at an index: %d. Is equal: %b", toCheck, toCheck == atIndex));
+      format(
+        "Found by system method at an index: %d. Is equal: %b",
+        toCheck,
+        toCheck == atIndex
+      )
+    );
   }
 }

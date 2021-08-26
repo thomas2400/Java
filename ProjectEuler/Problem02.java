@@ -12,13 +12,14 @@ package ProjectEuler;
  * <p>Link: https://projecteuler.net/problem=2
  */
 public class Problem02 {
+
   public static void main(String[] args) {
     int[][] testNumbers = {
-      {10, 10}, /* 2 + 8 == 10 */
-      {15, 10}, /* 2 + 8 == 10 */
-      {2, 2},
-      {1, 0},
-      {89, 44} /* 2 + 8 + 34 == 44 */
+      { 10, 10 },/* 2 + 8 == 10 */
+      { 15, 10 },/* 2 + 8 == 10 */
+      { 2, 2 },
+      { 1, 0 },
+      { 89, 44 }/* 2 + 8 + 34 == 44 */,
     };
 
     for (int[] ints : testNumbers) {

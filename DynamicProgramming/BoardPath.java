@@ -1,4 +1,5 @@
 package DynamicProgramming;
+
 /*
 * this is an important Algo in which
 * we have starting and ending of board and we have to reach
@@ -25,6 +26,7 @@ int n=10;
 
 */
 public class BoardPath {
+
   public static long startTime;
   public static long endTime;
 

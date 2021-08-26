@@ -2,6 +2,7 @@ package Maths;
 
 /** https://en.wikipedia.org/wiki/Perfect_square */
 public class PerfectSquare {
+
   public static void main(String[] args) {
     assert !isPerfectSquare(-1);
     assert !isPerfectSquare(3);

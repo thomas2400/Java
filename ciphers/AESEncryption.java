@@ -17,6 +17,7 @@ import javax.crypto.SecretKey;
 public class AESEncryption {
 
   private static final char[] HEX_ARRAY = "0123456789ABCDEF".toCharArray();
+
   /**
    * 1. Generate a plain text for encryption 2. Get a secret key (printed in hexadecimal form). In
    * actual use this must by encrypted and kept safe. The same key is required for decryption.
@@ -39,7 +40,8 @@ public class AESEncryption {
    * @return secKey (Secret key that we encrypt using it)
    * @throws NoSuchAlgorithmException (from KeyGenrator)
    */
-  public static SecretKey getSecretEncryptionKey() throws NoSuchAlgorithmException {
+  public static SecretKey getSecretEncryptionKey()
+    throws NoSuchAlgorithmException {
     KeyGenerator aesKeyGenerator = KeyGenerator.getInstance("AES");
     aesKeyGenerator.init(128); // The AES key size in number of bits
     SecretKey secKey = aesKeyGenerator.generateKey();
@@ -59,8 +61,7 @@ public class AESEncryption {
    * @throws IllegalBlockSizeException (from Cipher)
    */
   public static byte[] encryptText(String plainText, SecretKey secKey)
-      throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException,
-          IllegalBlockSizeException, BadPaddingException {
+    throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
     // AES defaults to AES/ECB/PKCS5Padding in Java 7
     Cipher aesCipher = Cipher.getInstance("AES");
     aesCipher.init(Cipher.ENCRYPT_MODE, secKey);
@@ -81,8 +82,7 @@ public class AESEncryption {
    * @throws IllegalBlockSizeException
    */
   public static String decryptText(byte[] byteCipherText, SecretKey secKey)
-      throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException,
-          IllegalBlockSizeException, BadPaddingException {
+    throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
     // AES defaults to AES/ECB/PKCS5Padding in Java 7
     Cipher aesCipher = Cipher.getInstance("AES");
     aesCipher.init(Cipher.DECRYPT_MODE, secKey);

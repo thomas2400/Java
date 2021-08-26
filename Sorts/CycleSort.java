@@ -35,10 +35,9 @@ class CycleSort implements SortAlgorithm {
         pos = j;
 
         // Find position where we put the element
-        for (int i = j + 1; i < n; i++)
-          if (less(arr[i], item)) {
-            pos += 1;
-          }
+        for (int i = j + 1; i < n; i++) if (less(arr[i], item)) {
+          pos += 1;
+        }
 
         // ignore all duplicate elements
         while (item.compareTo(arr[pos]) == 0) pos += 1;
@@ -61,7 +60,7 @@ class CycleSort implements SortAlgorithm {
   }
 
   public static void main(String[] args) {
-    Integer arr[] = {4, 23, 6, 78, 1, 26, 11, 23, 0, -6, 3, 54, 231, 9, 12};
+    Integer arr[] = { 4, 23, 6, 78, 1, 26, 11, 23, 0, -6, 3, 54, 231, 9, 12 };
     CycleSort cycleSort = new CycleSort();
     cycleSort.sort(arr);
 

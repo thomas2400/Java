@@ -10,7 +10,6 @@ public class Fibonacci {
   private static Map<Integer, Integer> map = new HashMap<>();
 
   public static void main(String[] args) {
-
     // Methods all returning [0, 1, 1, 2, 3, 5, ...] for n = [0, 1, 2, 3, 4, 5, ...]
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -50,7 +49,6 @@ public class Fibonacci {
    *     fibonacci number
    */
   public static int fibBotUp(int n) {
-
     Map<Integer, Integer> fib = new HashMap<>();
 
     for (int i = 0; i <= n; i++) {

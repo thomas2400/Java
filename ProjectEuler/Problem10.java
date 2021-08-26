@@ -8,14 +8,15 @@ package ProjectEuler;
  * <p>link: https://projecteuler.net/problem=10
  */
 public class Problem10 {
+
   public static void main(String[] args) {
     long[][] testNumbers = {
-      {2000000, 142913828922L},
-      {10000, 5736396},
-      {5000, 1548136},
-      {1000, 76127},
-      {10, 17},
-      {7, 10}
+      { 2000000, 142913828922L },
+      { 10000, 5736396 },
+      { 5000, 1548136 },
+      { 1000, 76127 },
+      { 10, 17 },
+      { 7, 10 },
     };
 
     for (long[] testNumber : testNumbers) {

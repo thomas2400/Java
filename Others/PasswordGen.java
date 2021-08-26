@@ -12,6 +12,7 @@ import java.util.Random;
  * @date 2017.10.25
  */
 class PasswordGen {
+
   public static void main(String args[]) {
     String password = generatePassword(8, 16);
     System.out.print("Password: " + password);
@@ -35,7 +36,11 @@ class PasswordGen {
     StringBuilder password = new StringBuilder();
 
     // Note that size of the password is also random
-    for (int i = random.nextInt(max_length - min_length) + min_length; i > 0; --i) {
+    for (
+      int i = random.nextInt(max_length - min_length) + min_length;
+      i > 0;
+      --i
+    ) {
       password.append(letters.get(random.nextInt(letters.size())));
     }
 

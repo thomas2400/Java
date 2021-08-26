@@ -9,13 +9,14 @@ package ProjectEuler;
  * <p>Link: https://projecteuler.net/problem=1
  */
 public class Problem01 {
+
   public static void main(String[] args) {
     int[][] testNumber = {
-      {3, 0},
-      {4, 3},
-      {10, 23},
-      {1000, 233168},
-      {-1, 0}
+      { 3, 0 },
+      { 4, 3 },
+      { 10, 23 },
+      { 1000, 233168 },
+      { -1, 0 },
     };
 
     for (int[] ints : testNumber) {

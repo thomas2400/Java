@@ -10,6 +10,7 @@ import java.util.ArrayList;
  * @version 1.0
  */
 public class FFTBluestein {
+
   /**
    * Bluestein's FFT Algorithm.
    *
@@ -38,7 +39,9 @@ public class FFTBluestein {
     /* Initialization of the a(n) sequence */
     for (int i = 0; i < N; i++) {
       double angle = -i * i * Math.PI / N * direction;
-      an.add(x.get(i).multiply(new FFT.Complex(Math.cos(angle), Math.sin(angle))));
+      an.add(
+        x.get(i).multiply(new FFT.Complex(Math.cos(angle), Math.sin(angle)))
+      );
     }
 
     ArrayList<FFT.Complex> convolution = ConvolutionFFT.convolutionFFT(an, bn);

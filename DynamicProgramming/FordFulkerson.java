@@ -5,6 +5,7 @@ import java.util.Queue;
 import java.util.Vector;
 
 public class FordFulkerson {
+
   static final int INF = 987654321;
   // edges
   static int V;
@@ -40,11 +41,13 @@ public class FordFulkerson {
       while (!q.isEmpty() && parent.get(sink) == -1) {
         int here = q.peek();
         q.poll();
-        for (int there = 0; there < V; ++there)
-          if (capacity[here][there] - flow[here][there] > 0 && parent.get(there) == -1) {
-            q.add(there);
-            parent.set(there, here);
-          }
+        for (int there = 0; there < V; ++there) if (
+          capacity[here][there] - flow[here][there] > 0 &&
+          parent.get(there) == -1
+        ) {
+          q.add(there);
+          parent.set(there, here);
+        }
       }
       if (parent.get(sink) == -1) break;
 
@@ -52,7 +55,8 @@ public class FordFulkerson {
       String printer = "path : ";
       StringBuilder sb = new StringBuilder();
       for (int p = sink; p != source; p = parent.get(p)) {
-        amount = Math.min(capacity[parent.get(p)][p] - flow[parent.get(p)][p], amount);
+        amount =
+          Math.min(capacity[parent.get(p)][p] - flow[parent.get(p)][p], amount);
         sb.append(p + "-");
       }
       sb.append(source);

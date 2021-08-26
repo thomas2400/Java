@@ -7,6 +7,7 @@ package com.maths;
  * @version 1.0
  */
 public class Convolution {
+
   /**
    * Discrete linear convolution function. Both input signals and the output signal must start from
    * 0. If you have a signal that has values before 0 then shift it to start from 0.

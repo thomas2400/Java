@@ -8,12 +8,15 @@ import java.util.Arrays;
  * <p>absMax([0, 5, 1, 11]) = 11, absMax([3 , -10, -2]) = -10
  */
 public class AbsoluteMax {
+
   public static void main(String[] args) {
-    int[] testnums = {-2, 0, 16};
+    int[] testnums = { -2, 0, 16 };
     assert absMax(testnums) == 16;
 
-    int[] numbers = {3, -10, -2};
-    System.out.println("absMax(" + Arrays.toString(numbers) + ") = " + absMax(numbers));
+    int[] numbers = { 3, -10, -2 };
+    System.out.println(
+      "absMax(" + Arrays.toString(numbers) + ") = " + absMax(numbers)
+    );
   }
 
   /**

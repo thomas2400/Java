@@ -8,10 +8,11 @@ package Maths;
  * <p>link:https://en.wikipedia.org/wiki/Perfect_number
  */
 public class PerfectNumber {
+
   public static void main(String[] args) {
-    assert isPerfectNumber(6); /* 1 + 2 + 3 == 6 */
-    assert !isPerfectNumber(8); /* 1 + 2 + 4 != 8 */
-    assert isPerfectNumber(28); /* 1 + 2 + 4 + 7 + 14 == 28 */
+    assert isPerfectNumber(6);/* 1 + 2 + 3 == 6 */
+    assert !isPerfectNumber(8);/* 1 + 2 + 4 != 8 */
+    assert isPerfectNumber(28);/* 1 + 2 + 4 + 7 + 14 == 28 */
   }
 
   /**
@@ -21,7 +22,7 @@ public class PerfectNumber {
    * @return {@code true} if {@code number} is perfect number, otherwise false
    */
   public static boolean isPerfectNumber(int number) {
-    int sum = 0; /* sum of its positive divisors */
+    int sum = 0;/* sum of its positive divisors */
     for (int i = 1; i < number; ++i) {
       if (number % i == 0) {
         sum += i;

@@ -2,6 +2,7 @@ package Maths;
 
 /** https://en.wikipedia.org/wiki/Cube_(algebra) */
 public class PerfectCube {
+
   public static void main(String[] args) {
     assert !isPerfectCube(-1);
     assert isPerfectCube(0);

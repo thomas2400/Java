@@ -10,6 +10,7 @@ package ProjectEuler;
  * <p>link: https://projecteuler.net/problem=9
  */
 public class Problem09 {
+
   public static void main(String[] args) {
     assert solution1() == 31875000;
   }
@@ -23,6 +24,6 @@ public class Problem09 {
         }
       }
     }
-    return -1; /* should not happen */
+    return -1;/* should not happen */
   }
 }

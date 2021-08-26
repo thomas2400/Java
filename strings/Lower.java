@@ -4,7 +4,7 @@ public class Lower {
 
   /** Driver Code */
   public static void main(String[] args) {
-    String[] strings = {"ABC", "ABC123", "abcABC", "abc123ABC"};
+    String[] strings = { "ABC", "ABC123", "abcABC", "abc123ABC" };
     for (String s : strings) {
       assert toLowerCase(s).equals(s.toLowerCase());
     }

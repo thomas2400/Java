@@ -2,8 +2,19 @@ package Maths;
 
 /** Find the number of digits in a number. */
 public class NumberOfDigits {
+
   public static void main(String[] args) {
-    int[] numbers = {0, 12, 123, 1234, -12345, 123456, 1234567, 12345678, 123456789};
+    int[] numbers = {
+      0,
+      12,
+      123,
+      1234,
+      -12345,
+      123456,
+      1234567,
+      12345678,
+      123456789,
+    };
     for (int i = 0; i < numbers.length; ++i) {
       assert numberOfDigits(numbers[i]) == i + 1;
       assert numberOfDigitsFast(numbers[i]) == i + 1;

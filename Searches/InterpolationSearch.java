@@ -30,14 +30,15 @@ class InterpolationSearch {
     while (start <= end && key >= array[start] && key <= array[end]) {
       // Probing the position with keeping
       // uniform distribution in mind.
-      int pos = start + (((end - start) / (array[end] - array[start])) * (key - array[start]));
+      int pos =
+        start +
+        (((end - start) / (array[end] - array[start])) * (key - array[start]));
 
       // Condition of target found
       if (array[pos] == key) return pos;
 
       // If key is larger, key is in upper part
       if (array[pos] < key) start = pos + 1;
-
       // If key is smaller, x is in lower part
       else end = pos - 1;
     }
@@ -49,7 +50,11 @@ class InterpolationSearch {
     Random r = new Random();
     int size = 100;
     int maxElement = 100000;
-    int[] integers = IntStream.generate(() -> r.nextInt(maxElement)).limit(size).sorted().toArray();
+    int[] integers = IntStream
+      .generate(() -> r.nextInt(maxElement))
+      .limit(size)
+      .sorted()
+      .toArray();
 
     // the element that should be found
     Integer shouldBeFound = integers[r.nextInt(size - 1)];
@@ -58,13 +63,22 @@ class InterpolationSearch {
     int atIndex = search.find(integers, shouldBeFound);
 
     System.out.println(
-        String.format(
-            "Should be found: %d. Found %d at index %d. An array length %d",
-            shouldBeFound, integers[atIndex], atIndex, size));
+      String.format(
+        "Should be found: %d. Found %d at index %d. An array length %d",
+        shouldBeFound,
+        integers[atIndex],
+        atIndex,
+        size
+      )
+    );
 
     int toCheck = Arrays.binarySearch(integers, shouldBeFound);
     System.out.println(
-        format(
-            "Found by system method at an index: %d. Is equal: %b", toCheck, toCheck == atIndex));
+      format(
+        "Found by system method at an index: %d. Is equal: %b",
+        toCheck,
+        toCheck == atIndex
+      )
+    );
   }
 }

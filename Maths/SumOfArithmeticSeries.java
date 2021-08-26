@@ -9,8 +9,8 @@ package Maths;
  * <p>Wikipedia: https://en.wikipedia.org/wiki/Arithmetic_progression
  */
 public class SumOfArithmeticSeries {
-  public static void main(String[] args) {
 
+  public static void main(String[] args) {
     /* 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 */
     assert Double.compare(55.0, sumOfSeries(1, 1, 10)) == 0;
 
@@ -34,7 +34,11 @@ public class SumOfArithmeticSeries {
    * @param numOfTerms the total terms of an arithmetic series
    * @return sum of given arithmetic series
    */
-  private static double sumOfSeries(double firstTerm, double commonDiff, int numOfTerms) {
+  private static double sumOfSeries(
+    double firstTerm,
+    double commonDiff,
+    int numOfTerms
+  ) {
     return numOfTerms / 2.0 * (2 * firstTerm + (numOfTerms - 1) * commonDiff);
   }
 }

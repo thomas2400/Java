@@ -8,14 +8,19 @@ import javax.swing.JOptionPane;
 public final class RSA {
 
   public static void main(String[] args) {
-
     RSA rsa = new RSA(1024);
     String text1 = JOptionPane.showInputDialog("Enter a message to encrypt :");
 
     String ciphertext = rsa.encrypt(text1);
-    JOptionPane.showMessageDialog(null, "Your encrypted message : " + ciphertext);
+    JOptionPane.showMessageDialog(
+      null,
+      "Your encrypted message : " + ciphertext
+    );
 
-    JOptionPane.showMessageDialog(null, "Your message after decrypt : " + rsa.decrypt(ciphertext));
+    JOptionPane.showMessageDialog(
+      null,
+      "Your message after decrypt : " + rsa.decrypt(ciphertext)
+    );
   }
 
   private BigInteger modulus, privateKey, publicKey;
@@ -30,7 +35,8 @@ public final class RSA {
    * @return encrypted message
    */
   public synchronized String encrypt(String message) {
-    return (new BigInteger(message.getBytes())).modPow(publicKey, modulus).toString();
+    return (new BigInteger(message.getBytes())).modPow(publicKey, modulus)
+      .toString();
   }
 
   /**
@@ -46,7 +52,10 @@ public final class RSA {
    * @return plain message
    */
   public synchronized String decrypt(String encryptedMessage) {
-    return new String((new BigInteger(encryptedMessage)).modPow(privateKey, modulus).toByteArray());
+    return new String(
+      (new BigInteger(encryptedMessage)).modPow(privateKey, modulus)
+        .toByteArray()
+    );
   }
 
   /**
@@ -68,7 +77,8 @@ public final class RSA {
     BigInteger q = new BigInteger(bits / 2, 100, r);
     modulus = p.multiply(q);
 
-    BigInteger m = (p.subtract(BigInteger.ONE)).multiply(q.subtract(BigInteger.ONE));
+    BigInteger m =
+      (p.subtract(BigInteger.ONE)).multiply(q.subtract(BigInteger.ONE));
 
     publicKey = new BigInteger("3");
 

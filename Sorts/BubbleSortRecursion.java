@@ -4,6 +4,7 @@ import java.util.Random;
 
 /** BubbleSort algorithm implements using recursion */
 public class BubbleSortRecursion implements SortAlgorithm {
+
   public static void main(String[] args) {
     Integer[] array = new Integer[10];
 
@@ -38,8 +39,11 @@ public class BubbleSortRecursion implements SortAlgorithm {
    * @param unsorted array contains elements
    * @param len length of given array
    */
-  private static <T extends Comparable<T>> void bubbleSort(T[] unsorted, int len) {
-    boolean swapped = false; /* flag to check if array is sorted or not */
+  private static <T extends Comparable<T>> void bubbleSort(
+    T[] unsorted,
+    int len
+  ) {
+    boolean swapped = false;/* flag to check if array is sorted or not */
     for (int i = 0; i < len - 1; ++i) {
       if (SortUtils.greater(unsorted[i], unsorted[i + 1])) {
         SortUtils.swap(unsorted, i, i + 1);

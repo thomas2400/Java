@@ -8,6 +8,7 @@ import java.util.Scanner;
  * href="http://devmag.org.za/2009/04/25/perlin-noise/">Perlin-Noise</a>
  */
 public class PerlinNoise {
+
   /**
    * @param width width of noise array
    * @param height height of noise array
@@ -17,7 +18,12 @@ public class PerlinNoise {
    * @return float array containing calculated "Perlin-Noise" values
    */
   static float[][] generatePerlinNoise(
-      int width, int height, int octaveCount, float persistence, long seed) {
+    int width,
+    int height,
+    int octaveCount,
+    float persistence,
+    long seed
+  ) {
     final float[][] base = new float[width][height];
     final float[][] perlinNoise = new float[width][height];
     final float[][][] noiseLayers = new float[octaveCount][][];
@@ -32,7 +38,8 @@ public class PerlinNoise {
 
     // calculate octaves with different roughness
     for (int octave = 0; octave < octaveCount; octave++) {
-      noiseLayers[octave] = generatePerlinNoiseLayer(base, width, height, octave);
+      noiseLayers[octave] =
+        generatePerlinNoiseLayer(base, width, height, octave);
     }
 
     float amplitude = 1f;
@@ -69,7 +76,12 @@ public class PerlinNoise {
    * @param octave current layer
    * @return float array containing calculated "Perlin-Noise-Layer" values
    */
-  static float[][] generatePerlinNoiseLayer(float[][] base, int width, int height, int octave) {
+  static float[][] generatePerlinNoiseLayer(
+    float[][] base,
+    int width,
+    int height,
+    int octave
+  ) {
     float[][] perlinNoiseLayer = new float[width][height];
 
     // calculate period (wavelength) for different shapes
@@ -141,7 +153,8 @@ public class PerlinNoise {
     System.out.println("Charset (String): ");
     charset = in.next();
 
-    perlinNoise = generatePerlinNoise(width, height, octaveCount, persistence, seed);
+    perlinNoise =
+      generatePerlinNoise(width, height, octaveCount, persistence, seed);
     final char[] chars = charset.toCharArray();
     final int length = chars.length;
     final float step = 1f / length;

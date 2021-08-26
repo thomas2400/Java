@@ -18,7 +18,8 @@ public class FindMinRecursion {
       array[i] = rand.nextInt() % 100;
     }
 
-    assert min(array, 0, array.length - 1) == Arrays.stream(array).min().getAsInt();
+    assert min(array, 0, array.length - 1) ==
+    Arrays.stream(array).min().getAsInt();
     assert min(array, array.length) == Arrays.stream(array).min().getAsInt();
   }
 

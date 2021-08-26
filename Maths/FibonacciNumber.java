@@ -2,6 +2,7 @@ package Maths;
 
 /** Fibonacci: 0 1 1 2 3 5 8 13 21 ... */
 public class FibonacciNumber {
+
   public static void main(String[] args) {
     assert isFibonacciNumber(1);
     assert isFibonacciNumber(2);
@@ -30,6 +31,9 @@ public class FibonacciNumber {
    * @link https://en.wikipedia.org/wiki/Fibonacci_number#Identification
    */
   public static boolean isFibonacciNumber(int number) {
-    return isPerfectSquare(5 * number * number + 4) || isPerfectSquare(5 * number * number - 4);
+    return (
+      isPerfectSquare(5 * number * number + 4) ||
+      isPerfectSquare(5 * number * number - 4)
+    );
   }
 }

@@ -2,6 +2,7 @@ package Maths;
 
 /** https://en.wikipedia.org/wiki/Lucas_number */
 public class LucasSeries {
+
   public static void main(String[] args) {
     assert lucasSeries(1) == 2 && lucasSeriesIteration(1) == 2;
     assert lucasSeries(2) == 1 && lucasSeriesIteration(2) == 1;

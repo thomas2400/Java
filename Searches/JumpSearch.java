@@ -4,7 +4,7 @@ public class JumpSearch implements SearchAlgorithm {
 
   public static void main(String[] args) {
     JumpSearch jumpSearch = new JumpSearch();
-    Integer[] array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    Integer[] array = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     for (int i = 0; i < array.length; i++) {
       assert jumpSearch.find(array, i) == i;
     }
@@ -21,8 +21,8 @@ public class JumpSearch implements SearchAlgorithm {
    */
   @Override
   public <T extends Comparable<T>> int find(T[] array, T key) {
-    int length = array.length; /* length of array */
-    int blockSize = (int) Math.sqrt(length); /* block size to be jumped */
+    int length = array.length;/* length of array */
+    int blockSize = (int) Math.sqrt(length);/* block size to be jumped */
 
     int limit = blockSize;
     while (key.compareTo(array[limit]) > 0 && limit < array.length - 1) {
@@ -35,6 +35,6 @@ public class JumpSearch implements SearchAlgorithm {
         return i;
       }
     }
-    return -1; /* not found */
+    return -1;/* not found */
   }
 }

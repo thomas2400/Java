@@ -9,6 +9,7 @@ import java.util.ArrayList;
  * @version 1.0
  */
 public class CircularConvolutionFFT {
+
   /**
    * This method pads the signal with zeros until it reaches the new size.
    *
@@ -34,10 +35,10 @@ public class CircularConvolutionFFT {
    * @return The convolved signal.
    */
   public static ArrayList<FFT.Complex> fftCircularConvolution(
-      ArrayList<FFT.Complex> a, ArrayList<FFT.Complex> b) {
-    int convolvedSize =
-        Math.max(
-            a.size(), b.size()); // The two signals must have the same size equal to the bigger one
+    ArrayList<FFT.Complex> a,
+    ArrayList<FFT.Complex> b
+  ) {
+    int convolvedSize = Math.max(a.size(), b.size()); // The two signals must have the same size equal to the bigger one
     padding(a, convolvedSize); // Zero padding the smaller signal
     padding(b, convolvedSize);
 
@@ -46,7 +47,9 @@ public class CircularConvolutionFFT {
     FFTBluestein.fftBluestein(b, false);
     ArrayList<FFT.Complex> convolved = new ArrayList<>();
 
-    for (int i = 0; i < a.size(); i++) convolved.add(a.get(i).multiply(b.get(i))); // FFT(a)*FFT(b)
+    for (int i = 0; i < a.size(); i++) convolved.add(
+      a.get(i).multiply(b.get(i))
+    ); // FFT(a)*FFT(b)
 
     FFTBluestein.fftBluestein(convolved, true); // IFFT
 

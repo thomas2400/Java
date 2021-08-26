@@ -13,6 +13,7 @@ package Others;
 import java.util.*;
 
 public class Dijkstra {
+
   private static final Graph.Edge[] GRAPH = {
     // Distance from node "a" to node "b" is 7.
     // In the current Graph there is no way to move the other way (e,g, from "b" to "a"),
@@ -40,11 +41,13 @@ public class Dijkstra {
 }
 
 class Graph {
+
   // mapping of vertex names to Vertex objects, built from a set of Edges
   private final Map<String, Vertex> graph;
 
   /** One edge of the graph (only used by Graph constructor) */
   public static class Edge {
+
     public final String v1, v2;
     public final int dist;
 
@@ -57,6 +60,7 @@ class Graph {
 
   /** One vertex of the graph, complete with mappings to neighbouring vertices */
   public static class Vertex implements Comparable<Vertex> {
+
     public final String name;
     // MAX_VALUE assumed to be infinity
     public int dist = Integer.MAX_VALUE;
@@ -93,11 +97,19 @@ class Graph {
       Vertex vertex = (Vertex) object;
 
       if (dist != vertex.dist) return false;
-      if (name != null ? !name.equals(vertex.name) : vertex.name != null) return false;
-      if (previous != null ? !previous.equals(vertex.previous) : vertex.previous != null)
-        return false;
-      if (neighbours != null ? !neighbours.equals(vertex.neighbours) : vertex.neighbours != null)
-        return false;
+      if (
+        name != null ? !name.equals(vertex.name) : vertex.name != null
+      ) return false;
+      if (
+        previous != null
+          ? !previous.equals(vertex.previous)
+          : vertex.previous != null
+      ) return false;
+      if (
+        neighbours != null
+          ? !neighbours.equals(vertex.neighbours)
+          : vertex.neighbours != null
+      ) return false;
 
       return true;
     }
@@ -139,7 +151,10 @@ class Graph {
   /** Runs dijkstra using a specified source vertex */
   public void dijkstra(String startName) {
     if (!graph.containsKey(startName)) {
-      System.err.printf("Graph doesn't contain start vertex \"%s\"%n", startName);
+      System.err.printf(
+        "Graph doesn't contain start vertex \"%s\"%n",
+        startName
+      );
       return;
     }
     final Vertex source = graph.get(startName);
@@ -161,8 +176,7 @@ class Graph {
     while (!q.isEmpty()) {
       // vertex with shortest distance (first iteration will return source)
       u = q.pollFirst();
-      if (u.dist == Integer.MAX_VALUE)
-        break; // we can ignore u (and any other remaining vertices) since they are unreachable
+      if (u.dist == Integer.MAX_VALUE) break; // we can ignore u (and any other remaining vertices) since they are unreachable
 
       // look at distances to each neighbour
       for (Map.Entry<Vertex, Integer> a : u.neighbours.entrySet()) {

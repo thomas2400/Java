@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class FindMaxRecursion {
+
   public static void main(String[] args) {
     Random rand = new Random();
 
@@ -17,7 +18,8 @@ public class FindMaxRecursion {
     }
 
     assert max(array, array.length) == Arrays.stream(array).max().getAsInt();
-    assert max(array, 0, array.length - 1) == Arrays.stream(array).max().getAsInt();
+    assert max(array, 0, array.length - 1) ==
+    Arrays.stream(array).max().getAsInt();
   }
 
   /**

@@ -2,6 +2,7 @@ package Others;
 
 /** Implementation of Knuth–Morris–Pratt algorithm Usage: see the main function for an example */
 public class KMP {
+
   // a working example
   public static void main(String[] args) {
     final String haystack = "AAAAABAAABA"; // This is the full string

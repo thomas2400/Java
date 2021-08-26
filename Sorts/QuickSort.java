@@ -27,7 +27,11 @@ class QuickSort implements SortAlgorithm {
    * @param right The last index of an array
    * @param array The array to be sorted
    */
-  private static <T extends Comparable<T>> void doSort(T[] array, int left, int right) {
+  private static <T extends Comparable<T>> void doSort(
+    T[] array,
+    int left,
+    int right
+  ) {
     if (left < right) {
       int pivot = randomPartition(array, left, right);
       doSort(array, left, pivot - 1);
@@ -43,7 +47,11 @@ class QuickSort implements SortAlgorithm {
    * @param right The last index of an array
    * @return the partition index of the array
    */
-  private static <T extends Comparable<T>> int randomPartition(T[] array, int left, int right) {
+  private static <T extends Comparable<T>> int randomPartition(
+    T[] array,
+    int left,
+    int right
+  ) {
     int randomIndex = left + (int) (Math.random() * (right - left + 1));
     swap(array, randomIndex, right);
     return partition(array, left, right);
@@ -56,7 +64,11 @@ class QuickSort implements SortAlgorithm {
    * @param left The first index of an array
    * @param right The last index of an array Finds the partition index of an array
    */
-  private static <T extends Comparable<T>> int partition(T[] array, int left, int right) {
+  private static <T extends Comparable<T>> int partition(
+    T[] array,
+    int left,
+    int right
+  ) {
     int mid = (left + right) >>> 1;
     T pivot = array[mid];
 
@@ -78,9 +90,26 @@ class QuickSort implements SortAlgorithm {
 
   // Driver Program
   public static void main(String[] args) {
-
     // For integer input
-    Integer[] array = {3, 4, 1, 32, 0, 1, 5, 12, 2, 5, 7, 8, 9, 2, 44, 111, 5};
+    Integer[] array = {
+      3,
+      4,
+      1,
+      32,
+      0,
+      1,
+      5,
+      12,
+      2,
+      5,
+      7,
+      8,
+      9,
+      2,
+      44,
+      111,
+      5,
+    };
 
     QuickSort quickSort = new QuickSort();
     quickSort.sort(array);
@@ -88,7 +117,7 @@ class QuickSort implements SortAlgorithm {
     // Output => 0 1 1 2 2 3 4 5 5 5 7 8 9 12 32 44 111
     print(array);
 
-    String[] stringArray = {"c", "a", "e", "b", "d"};
+    String[] stringArray = { "c", "a", "e", "b", "d" };
     quickSort.sort(stringArray);
 
     // Output => a	b	c	d	e

@@ -2,6 +2,7 @@ package Maths;
 
 /** https://en.wikipedia.org/wiki/Pythagorean_triple */
 public class PythagoreanTriple {
+
   public static void main(String[] args) {
     assert isPythagTriple(3, 4, 5);
     assert isPythagTriple(5, 12, 13);

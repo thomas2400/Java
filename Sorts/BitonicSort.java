@@ -3,6 +3,7 @@ package Sorts;
 /* Java program for Bitonic Sort. Note that this program
 works only when size of input is a power of 2. */
 public class BitonicSort {
+
   /* The parameter dir indicates the sorting direction,
   ASCENDING or DESCENDING; if (a[i] > a[j]) agrees
   with the direction, then a[i] and a[j] are
@@ -64,7 +65,7 @@ public class BitonicSort {
   }
 
   public static void main(String args[]) {
-    int a[] = {3, 7, 4, 8, 6, 2, 1, 5};
+    int a[] = { 3, 7, 4, 8, 6, 2, 1, 5 };
     int up = 1;
     BitonicSort ob = new BitonicSort();
     ob.sort(a, a.length, up);
