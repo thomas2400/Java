@@ -131,6 +131,7 @@
   * [BinaryPow](https://github.com/TheAlgorithms/Java/blob/master/Maths/BinaryPow.java)
   * [Ceil](https://github.com/TheAlgorithms/Java/blob/master/Maths/Ceil.java)
   * [CircularConvolutionFFT](https://github.com/TheAlgorithms/Java/blob/master/Maths/CircularConvolutionFFT.java)
+  * [Circumference](https://github.com/TheAlgorithms/Java/blob/master/Maths/Circumference.java)
   * [Combinations](https://github.com/TheAlgorithms/Java/blob/master/Maths/Combinations.java)
   * [Convolution](https://github.com/TheAlgorithms/Java/blob/master/Maths/Convolution.java)
   * [ConvolutionFFT](https://github.com/TheAlgorithms/Java/blob/master/Maths/ConvolutionFFT.java)
@@ -166,7 +167,9 @@
   * [PythagoreanTriple](https://github.com/TheAlgorithms/Java/blob/master/Maths/PythagoreanTriple.java)
   * [SumOfArithmeticSeries](https://github.com/TheAlgorithms/Java/blob/master/Maths/SumOfArithmeticSeries.java)
   * [SumOfDigits](https://github.com/TheAlgorithms/Java/blob/master/Maths/SumOfDigits.java)
+  * [SuperPrime](https://github.com/TheAlgorithms/Java/blob/master/Maths/SuperPrime.java)
   * [VampireNumber](https://github.com/TheAlgorithms/Java/blob/master/Maths/VampireNumber.java)
+  * [Volume](https://github.com/TheAlgorithms/Java/blob/master/Maths/Volume.java)
 
 ## MinimizingLateness
   * [MinimizingLateness](https://github.com/TheAlgorithms/Java/blob/master/MinimizingLateness/MinimizingLateness.java)
@@ -190,6 +193,7 @@
   * [FibToN](https://github.com/TheAlgorithms/Java/blob/master/Others/FibToN.java)
   * [FirstFit](https://github.com/TheAlgorithms/Java/blob/master/Others/FirstFit.java)
   * [FloydTriangle](https://github.com/TheAlgorithms/Java/blob/master/Others/FloydTriangle.java)
+  * [GreedyMethod](https://github.com/TheAlgorithms/Java/blob/master/Others/GreedyMethod.java)
   * [GuassLegendre](https://github.com/TheAlgorithms/Java/blob/master/Others/GuassLegendre.java)
   * [InsertDeleteInArray](https://github.com/TheAlgorithms/Java/blob/master/Others/InsertDeleteInArray.java)
   * [KMP](https://github.com/TheAlgorithms/Java/blob/master/Others/KMP.java)
