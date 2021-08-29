@@ -17,4 +17,4 @@ jobs:
         prettier_options: '--no-semi --write */*.java'
         branch: ${{ github.head_ref }}
       env:
-        GITHUB_TOKEN: ${{ secrets.WORKFLOW }}
+        GITHUB_TOKEN: ${{secrets.WORKFLOW}}
