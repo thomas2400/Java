@@ -57,11 +57,8 @@ class CountingSort implements SortAlgorithm {
       .collect(toMap(k -> k, v -> 1, (v1, v2) -> v1 + v2, TreeMap::new))
       .entrySet()
       .stream()
-      .flatMap(
-        entry ->
-          IntStream
-            .rangeClosed(1, entry.getValue())
-            .mapToObj(t -> entry.getKey())
+      .flatMap(entry ->
+        IntStream.rangeClosed(1, entry.getValue()).mapToObj(t -> entry.getKey())
       )
       .collect(toList());
   }
