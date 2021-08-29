@@ -167,6 +167,7 @@
   * [PythagoreanTriple](https://github.com/TheAlgorithms/Java/blob/master-copy/Maths/PythagoreanTriple.java)
   * [SumOfArithmeticSeries](https://github.com/TheAlgorithms/Java/blob/master-copy/Maths/SumOfArithmeticSeries.java)
   * [SumOfDigits](https://github.com/TheAlgorithms/Java/blob/master-copy/Maths/SumOfDigits.java)
+  * [SuperPrime](https://github.com/TheAlgorithms/Java/blob/master-copy/Maths/SuperPrime.java)
   * [VampireNumber](https://github.com/TheAlgorithms/Java/blob/master-copy/Maths/VampireNumber.java)
   * [Volume](https://github.com/TheAlgorithms/Java/blob/master-copy/Maths/Volume.java)
 
